@@ -1,0 +1,16 @@
+<form id="form-let-me" class="hide form-let-me" action="/lista_de_espera" method="post">
+	<label class="color-orange">Produto indisponível no momento.</label>
+	<input type="hidden" name="reply_to" id="reply_to" value="">
+	<input type="hidden" name="imagemvariante" value="{{ product.image_url }}">
+	<input type="hidden" name="referencia" value="{{ product.reference }}">
+	<input id="selected_sku" class="selected_sku" type="hidden" name="sku" value="" required>
+  <input type="hidden" name="preco" value="{{ product.price | money_format }}">
+  <div class = "input-group">
+  	<input class="form-control" type="email" name="email" value="" required placeholder="Preencha com seu email"> 
+		<button type="submit" class="input-group-addon">
+			<span>Avise-me</span>
+			<span>Enviando...</span>
+		</button>
+	</div>
+
+</form>
